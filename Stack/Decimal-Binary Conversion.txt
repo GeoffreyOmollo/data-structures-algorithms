@@ -1,0 +1,30 @@
+import java.util.Stack;
+
+public class Solution {
+    // Method to convert a decimal number to binary representation
+    public String decimalToBinary(int num) {
+        // Create a stack to store binary digits
+        Stack<Integer> stack = new Stack<>();
+
+        StringBuilder sb = new StringBuilder();
+        
+        while (num > 0) {
+            stack.push(num % 2); 
+            num /= 2;           
+        }
+        
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
+        
+        // Convert the StringBuilder to a string and return the binary representation
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        // Test cases to convert decimal numbers to binary
+        System.out.println(decimalToBinary(2));   // Output: 10
+        System.out.println(decimalToBinary(7));   // Output: 111
+        System.out.println(decimalToBinary(18));  // Output: 10010
+    }
+}
