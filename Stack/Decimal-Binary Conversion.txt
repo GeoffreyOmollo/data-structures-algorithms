@@ -2,6 +2,7 @@ import java.util.Stack;
 
 public class Solution {
     public String decimalToBinary(int num) {
+        // A stack data structure will be used
         Stack<Integer> stack = new Stack<>();
 
         StringBuilder sb = new StringBuilder();
