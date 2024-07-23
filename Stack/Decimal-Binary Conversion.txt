@@ -1,9 +1,7 @@
 import java.util.Stack;
 
 public class Solution {
-    // Method to convert a decimal number to binary representation
     public String decimalToBinary(int num) {
-        // Create a stack to store binary digits
         Stack<Integer> stack = new Stack<>();
 
         StringBuilder sb = new StringBuilder();
@@ -17,7 +15,6 @@ public class Solution {
             sb.append(stack.pop());
         }
         
-        // Convert the StringBuilder to a string and return the binary representation
         return sb.toString();
     }
 
